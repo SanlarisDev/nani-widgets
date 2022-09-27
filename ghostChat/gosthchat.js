@@ -11,7 +11,7 @@
 
  let FieldData = {}
  let Widget = {
-   container: $(".purpleChat"),
+   container: $(".widget__right--wrapper"),
    pronouns: [],
    pronounsCache: [],
    totalMessages: 0,
@@ -56,6 +56,7 @@
  });
  
  window.addEventListener('onEventReceived', async function(obj) {
+     console.log(obj);
      const { event, listener } = obj.detail;
      const { data } = event;
  
@@ -95,47 +96,37 @@
      if (isAction) {
          actionClass = "action";
      }
-     const element = $.parseHTML(`
-     <div data-sender="${uid}" data-msgid="${msgId}" id="msg-${Widget.totalMessages}" class=" ${Widget.animationIn} animated purpleChat-bubble">
-     <div class="headerBubble">
-       <div class="headerBubble-icon">
-       <svg id="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.63 5.3"><path class="star" d="M3.11,.22l.62,1.31c.03,.09,.11,.15,.21,.15l1.38,.16c.21,0,.3,.28,.13,.4l-1,1.1c-.08,.06-.11,.15-.08,.25l.24,1.35c.06,.2-.16,.38-.33,.25l-1.17-.67c-.08-.06-.32-.07-.41,0l-1.24,.67c-.17,.13-.4-.04-.33-.25l.2-1.33c.03-.09,0-.19-.08-.25L.29,2.26c-.17-.13-.08-.4,.13-.4l1.36-.18c.09,0,.18-.06,.21-.15L2.69,.22c.06-.2,.35-.2,.41,0Z" /></svg>
-       </div>
-       <div class="headerBubble-separator">
-   </div>
-     </div>
-     <div class="bodyBubble">
-       <div ${actionClass} class="bodyBubble-label">
-         <span class="bodyBubble-label__badges">
-         ${userBadge}
+
+     const element =`
+     <div data-sender="${uid}" data-msgid="${msgId}" 
+            id="msg-${Widget.totalMessages}" 
+            class="${Widget.animationIn} animated bubble">
+     <div class="bubble__title">
+         <span class="bubble__title--decoration">
+             <svg id="svg-lines" xmlns="http://www.w3.org/2000/svg">
+                 <path class="svg-lines"
+                     d="M8.16,10.23v3.14c-.01,.48-.4,.86-.88,.87h-.18c-.48,0-.86-.38-.86-.86v-3.14c.01-.48,.4-.86,.88-.87h.18c.48,0,.86,.38,.86,.86Z" />
+                 <path class="svg-lines"
+                     d="M13.44,8.1h-3.23c-.48,.01-.86-.37-.86-.85v-.22c0-.48,.39-.86,.87-.87h3.23c.48-.01,.86,.37,.86,.85v.22c0,.48-.39,.86-.87,.87Z" />
+                 <path class="svg-lines"
+                     d="M6.28,4.12V.93c0-.48,.39-.87,.87-.87h.18c.48,0,.87,.39,.87,.87v3.19c0,.48-.39,.87-.87,.87h-.18c-.48,0-.87-.39-.87-.87Z" />
+                 <path class="svg-lines"
+                     d="M.93,6.26h3.28c.48,0,.87,.39,.87,.87v.22c0,.48-.39,.87-.87,.87H.93c-.48,0-.87-.39-.87-.87v-.22c0-.48,.39-.87,.87-.87Z" />
+             </svg>
          </span>
-         <span class="bodyBubble-label__username">${username}${userPronoun}</span>
- 
-       </div>
-       <div class="bodyBubble-message ${actionClass}">
-           <div class="bodyBubble-message__text">
-           ${message}
-           </div>
-           <div class="bodyBubble-message__decoration">
-           <svg id="star2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.78 16.96">
-             <path class="star" 
-                         d="M12.61,1.89l1.59-1.3c.37-.3,.92-.05,.93,.42l.07,2.03c0,.19,.11,.36,.27,.46l1.72,1.09c.4,.25,.34,.86-.11,1.02l-1.93,.7c-.18,.06-.31,.21-.36,.39l-.52,1.98c-.12,.46-.71,.58-1,.21l-1.27-1.61c-.12-.15-.3-.23-.48-.22l-2.05,.13c-.47,.03-.77-.5-.51-.89l1.14-1.69c.11-.16,.13-.35,.06-.53l-.75-1.89c-.17-.44,.23-.89,.69-.76l1.98,.56c.18,.05,.37,.01,.52-.11Z"/>
-                 <g id="dot1">
-                   <path  class="dot1"  
-                               d="M.93,3.8c-.36,0-.65,.29-.65,.65s.29,.65,.65,.65,.65-.29,.65-.65-.29-.65-.65-.65Z"/>
-                 </g>
-                 <g id="dot2">
-                   <path class="dot2" 
-                               d="M17.59,14.85c-.51,0-.92,.41-.92,.92s.41,.92,.92,.92,.92-.41,.92-.92-.41-.92-.92-.92Z"/>
-                 </g>
-           </svg>
-           </div>
-       </div>
+         <span class="bubble__tittle--badges">
+            ${userBadge}
+         </span>
+         <span class="bubble__tittle--label ${actionClass}">${username} ${userPronoun}</span>
      </div>
-   </div>`);
+     <div class="bubble__message ${actionClass}" >
+        ${message}
+     </div>
+ </div>
+ `;
    
    $(element).appendTo(Widget.container).delay(FieldData.timeMessages * 1000);
- 
+ 	console.log(Widget);
      if (Widget.totalMessages > Widget.messagesLimit) {
        $(Widget.removeSelector).length && $(Widget.removeSelector).remove();
    }
