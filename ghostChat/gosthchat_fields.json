@@ -1,0 +1,86 @@
+{
+    "fontName": {
+        "type": "googleFont",
+        "label": "Select a font:",
+        "value": "Baloo Bhai 2",
+        "group": "🔠Custom Fonts"
+    },
+    "fontSizeLabel": {
+        "type": "number",
+        "label": "Choose font size for username:",
+        "min": 0,
+        "max": 20,
+        "value": 16,
+        "group": "🔠Custom Fonts"
+    },
+    "fontSizeMessage": {
+        "type": "number",
+        "label": "Choose font size for message:",
+        "min": 0,
+        "max": 50,
+        "value": 14,
+        "group": "🔠Custom Fonts"
+    },
+    "colorPrimary": {
+        "type": "colorpicker",
+        "label": "Primary color (icons and lines)",
+        "value": "#aa89ff",
+        "group": "🎨Custom Colors"
+    },
+    "colorLabel": {
+        "type": "colorpicker",
+        "label": "Username and pronouns font color",
+        "value": "#aa89ff",
+        "group": "🎨Custom Colors"
+    },
+    "colorMessage": {
+        "type": "colorpicker",
+        "label": "Message font color",
+        "value": "#ffffff",
+        "group": "🎨Custom Colors"
+    },
+    "showBudges": {
+        "type": "dropdown",
+        "label": "Active Badgets",
+        "value": "true",
+        "options": {
+            "false": "No",
+            "true": "Yes"
+        },
+        "group": "⚙️More Configuration"
+    },
+    "showPronouns": {
+        "type": "dropdown",
+        "label": "Active Pronouns",
+        "value": "true",
+        "options": {
+            "false": "No",
+            "true": "Yes"
+        },
+        "group": "⚙️More Configuration"
+    },
+    "messagesLimit": {
+        "type": "number",
+        "label": "How many messages",
+        "value": "3",
+        "group": "⚙️More Configuration"
+    },
+    "messagesTime": {
+        "type": "number",
+        "label": "How long show messages",
+        "value": "1000",
+        "group": "⚙️More Configuration"
+    },
+    "credits": {
+        "type": "hidden",
+        "label": "🎨Designs by @Nani",
+        "value": "",
+        "group": "✨Credits and support"
+    },
+    "credits2": {
+        "type": "hidden",
+        "label": "💻Develop by @Sanlaris_game",
+        "value": "",
+        "group": "✨Credits and support"
+    }
+}
