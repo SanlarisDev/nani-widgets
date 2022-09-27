@@ -1,0 +1,150 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css');
+:root{
+    --color-primary: {{colorPrimary}};
+    --color-text-label: {{colorLabel}};
+    --color-text-message: {{colorMessage}};
+    --font-size-label: {{fontSizeLabel}}px;
+    --font-size-message: {{fontSizeMessage}}px;
+    --font-family-label: '{{fontName}}', cursive;
+    --font-family-message: '{{fontName}}', cursive;
+}
+
+.widget{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    height: 90vh;
+    width: 100%;
+}
+
+.widget__left{
+    width: 54px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.widget__left--ghost #ghost{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: var(--color-primary) solid 2px;
+}
+
+.widget__left--ghost .svg-ghost {
+    fill: var(--color-primary);
+}
+
+.widget__left--dots {
+    flex: 1;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.widget__left--dots #bg .line-dots{
+    stroke: var(--color-primary);
+    stroke-width: 2.5px;
+    stroke-miterlimit: 16;
+    stroke-linecap: round;
+    stroke-dasharray: 0 0 0 12;
+}
+
+.widget__left--bottom{
+    width: 26px;
+    height: 26px;
+}
+
+.widget__left--bottom .dot{
+    margin-top: 2px;
+    text-align: center;
+    line-height: 25px;
+    font-size: 50px;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    border: var(--color-primary) solid 2px;
+    color: var(--color-primary);
+}
+
+.widget__right{
+    width: 100%;
+    margin-top: 30%;
+    margin-bottom: 30%;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.widget__right--wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    align-content: flex-start;
+    box-sizing: border-box;
+    overflow-y: hidden;
+    height: 98%;
+}
+
+.action{
+    font-style: oblique;
+}
+
+.bubble{
+    margin-bottom: 25px;
+}
+
+.bubble:last-child {
+    margin-bottom: 0px;
+}
+
+.bubble__title{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: row;
+    text-transform: uppercase;
+}
+
+.bubble__title--decoration {
+    position: absolute;
+    top: 9px;
+    left: 0px;
+}
+
+.bubble__title--decoration #svg-lines {
+   width: 15px;
+   height: 15px;
+}
+
+.bubble__title--decoration .svg-lines {
+    fill: var(--color-primary);
+    fill-rule: evenodd;
+}
+
+.bubble__tittle--badges{
+    margin-left: 33px;
+}
+
+.bubble__tittle--badges>img {
+    width: var(--font-size-label);
+}
+
+.bubble__tittle--label {
+    font-size: var(--font-size-label);
+    font-family: var(--font-family-label);
+    color: var(--color-text-label);
+    font-weight: 900;
+    padding-left: 8px;
+}
+
+.bubble__message{
+    font-size: var(--font-size-message);
+    font-family: var(--font-family-message);
+    color: var(--color-text-message);
+    font-weight: 900;
+    padding-left: 33px;
+    line-height: calc(var(--font-size-message) * 1.2);
+}
