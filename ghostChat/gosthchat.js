@@ -16,6 +16,7 @@
    pronounsCache: [],
    totalMessages: 0,
    messagesLimit: 0,
+   timeMessages: 0,
    removeSelector: null,
    additon: null,
    hideCommands: [],
@@ -124,9 +125,20 @@
      </div>
  </div>
  `;
-   
-   $(element).appendTo(Widget.container).delay(FieldData.timeMessages * 1000);
- 	console.log(Widget);
+
+ if(FieldData.timeMessages < 999){
+  console.log(FieldData.timeMessages);
+  $(element).appendTo(Widget.container).delay(FieldData.timeMessages * 1000).queue(function () {
+    console.log(FieldData.timeMessages);
+      $(this).removeClass(Widget.animationIn).addClass(Widget.animationOut).delay(1000).queue(function () {
+        $(this).remove();
+      }).dequeue();
+  });
+} else {
+  $(element).appendTo(Widget.container);
+}
+
+
      if (Widget.totalMessages > Widget.messagesLimit) {
        $(Widget.removeSelector).length && $(Widget.removeSelector).remove();
    }

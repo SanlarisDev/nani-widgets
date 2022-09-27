@@ -65,9 +65,9 @@
         "value": "3",
         "group": "⚙️More Configuration"
     },
-    "messagesTime": {
+    "timeMessages": {
         "type": "number",
-        "label": "How long show messages",
+        "label": "How long show messages (999 infinite)",
         "value": "1000",
         "group": "⚙️More Configuration"
     },

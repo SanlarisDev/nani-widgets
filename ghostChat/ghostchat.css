@@ -147,4 +147,7 @@
     font-weight: 900;
     padding-left: 33px;
     line-height: calc(var(--font-size-message) * 1.2);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
