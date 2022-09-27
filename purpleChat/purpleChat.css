@@ -1,0 +1,172 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css');
+:root {
+	--width-wrapper: 90%;
+    --width-header: 30px;
+  --font-size-label: {{fontSizeLabel}}px;
+  --font-size-message: {{fontSizeMessage}}px;
+  --color-primary: {{colorPrimary}};
+  --color-secondary: {{colorSecondary}};
+  --color-text-label: {{colorPrimary}};
+  --color-text-message: {{colorMessage}};
+  --font-family-label: '{{fontName}}', cursive;
+  --font-family-message: '{{fontName}}', cursive;
+  --thikness-line: {{thiknessLine}}px;
+  --height-line: {{heightLine}}px;
+  --background-dots: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='Capa_32' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1.06 122.73' width='2.5px'%3E%3Cpath fill='%23aa89ff' d='M.53,121.11c-.2,0-.35-.16-.35-.36s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.36-.35,.36Zm0-2.36c-.2,0-.35-.16-.35-.36s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.36-.35,.36Zm0-2.36c-.2,0-.35-.16-.35-.36s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.36-.35,.36Zm0-2.36c-.2,0-.35-.16-.35-.36s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.36-.35,.36Zm0-2.36c-.2,0-.35-.16-.35-.36s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.36-.35,.36Zm0-2.36c-.2,0-.35-.16-.35-.36s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.36-.35,.36Zm0-2.36c-.2,0-.35-.16-.35-.36s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.36-.35,.36Zm0-2.36c-.2,0-.35-.16-.35-.36s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.36-.35,.36Zm0-2.36c-.2,0-.35-.16-.35-.36s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.36-.35,.36Zm0-2.36c-.2,0-.35-.16-.35-.36s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.36-.35,.36Zm0-2.36c-.2,0-.35-.16-.35-.36s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.36-.35,.36Zm0-2.36c-.2,0-.35-.16-.35-.36s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.36-.35,.36Zm0-2.36c-.2,0-.35-.16-.35-.36s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.36-.35,.36Zm0-2.36c-.2,0-.35-.16-.35-.36s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.36-.35,.36Zm0-2.36c-.2,0-.35-.16-.35-.36s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.36-.35,.36Zm0-2.36c-.2,0-.35-.16-.35-.36s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.36-.35,.36Zm0-2.36c-.2,0-.35-.16-.35-.36s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.36-.35,.36Zm0-2.36c-.2,0-.35-.16-.35-.36s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.36-.35,.36Zm0-2.36c-.2,0-.35-.16-.35-.36s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.36-.35,.36Zm0-2.36c-.2,0-.35-.16-.35-.36s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.36-.35,.36Zm0-2.36c-.2,0-.35-.16-.35-.36s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.36-.35,.36Zm0-2.36c-.2,0-.35-.16-.35-.36s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.36-.35,.36Zm0-2.36c-.2,0-.35-.16-.35-.36s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.36-.35,.36Zm0-2.36c-.2,0-.35-.16-.35-.36s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.36-.35,.36Zm0-2.36c-.2,0-.35-.16-.35-.36s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.36-.35,.36Zm0-2.36c-.2,0-.35-.16-.35-.36s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.36-.35,.36Zm0-2.36c-.2,0-.35-.16-.35-.36s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.36-.35,.36Zm0-2.36c-.2,0-.35-.16-.35-.36s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.36-.35,.36Zm0-2.36c-.2,0-.35-.16-.35-.36s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.36-.35,.36Zm0-2.36c-.2,0-.35-.16-.35-.36s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.36-.35,.36Zm0-2.36c-.2,0-.35-.16-.35-.36s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.36-.35,.36Zm0-2.36c-.2,0-.35-.16-.35-.36s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.36-.35,.36Zm0-2.36c-.2,0-.35-.16-.35-.36s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.36-.35,.36Zm0-2.36c-.2,0-.35-.16-.35-.36s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.36-.35,.36Zm0-2.36c-.2,0-.35-.16-.35-.36s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.36-.35,.36Zm0-2.36c-.2,0-.35-.16-.35-.36s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.36-.35,.36Zm0-2.36c-.2,0-.35-.16-.35-.36s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.36-.35,.36Zm0-2.36c-.2,0-.35-.16-.35-.36s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.36-.35,.36Zm0-2.36c-.2,0-.35-.16-.35-.36s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.36-.35,.36Zm0-2.36c-.2,0-.35-.16-.35-.36s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.36-.35,.36Zm0-2.36c-.2,0-.35-.16-.35-.35s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.35-.35,.35Zm0-2.36c-.2,0-.35-.16-.35-.35s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.35-.35,.35Zm0-2.36c-.2,0-.35-.16-.35-.35s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.35-.35,.35Zm0-2.36c-.2,0-.35-.16-.35-.35s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.35-.35,.35Zm0-2.36c-.2,0-.35-.16-.35-.35s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.35-.35,.35Zm0-2.36c-.2,0-.35-.16-.35-.35s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.35-.35,.35Zm0-2.36c-.2,0-.35-.16-.35-.35s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.35-.35,.35Zm0-2.36c-.2,0-.35-.16-.35-.35s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.35-.35,.35Zm0-2.36c-.2,0-.35-.16-.35-.35s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.35-.35,.35Zm0-2.36c-.2,0-.35-.16-.35-.35s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.35-.35,.35ZM.53,3.26c-.2,0-.35-.16-.35-.35s.16-.39,.35-.39,.35,.12,.35,.32v.07c0,.2-.16,.35-.35,.35ZM.53,.9c-.2,0-.35-.16-.35-.35S.34,.15,.53,.15s.35,.12,.35,.32v.07c0,.2-.16,.35-.35,.35Z' /%3E%3C/svg%3E");
+}
+
+* {
+    font-family: var(--font-family-label);
+}
+
+.purpleChat{
+	display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    align-content: flex-start;
+    height:98%;
+    margin-bottom:10px;
+    box-sizing: border-box;
+}
+
+.purpleChat-bubble {
+    width: var(--width-wrapper);
+    margin-bottom: 20px;
+    display: flex;
+  	flex: 0 0 auto;
+    flex-direction: row;
+  	vertical-align: baseline;
+}
+
+.headerBubble {
+    width: var(--width-header);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.headerBubble-icon {
+    width: 25px;
+    height: 25px;
+    border: var(--color-primary) solid 2px;
+    border-radius: 8px;
+    transform: rotate(45deg);
+}
+
+.headerBubble-icon #star>.star {
+    fill: var(--color-primary);
+    transform: rotate(-45deg) scale(0.55) translateY(0px) translateX(-0.2px);
+    transform-origin: center center;
+}
+
+.headerBubble-separator {
+    -webkit-mask: var(--background-dots);
+    mask: var(--background-dots);
+    -webkit-mask-size: 4px;
+    -webkit-mask-repeat: repeat-y;
+    -webkit-mask-position-x: 12px;
+    background-color: var(--color-primary);
+    flex: 1;
+    margin-top: 11px;
+}
+
+.bodyBubble {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    width: calc(100% - var( --width-header));
+}
+
+.bodyBubble-label {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: row;
+    font-family: var(--font-family-label);
+    font-size: var(--font-size-label);
+    text-transform: uppercase;
+    color: var(--color-text-label);
+    font-weight: 900;
+    height: calc(var(--font-size-label) * 1.5);
+    padding: 0px 8px;
+}
+
+.bodyBubble-label__username {
+    display: block;
+    align-items: center;
+    overflow: hidden;
+    margin-right: 20%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.bodyBubble-label__badges {
+    display: flex;
+    align-items: center;
+  	padding-right: 5px;
+}
+
+.bodyBubble-label__badges>img {
+    width: var(--font-size-label);
+}
+
+.bodyBubble-message {
+    font-family: var(--font-family-message);
+    font-size: var(--font-size-message);
+    font-weight: 500;
+    line-height: calc(var(--font-size-message) * 1.1);
+    color: var(--color-text-message);
+    background: var(--color-secondary);
+    border-radius: 30px;
+    border: var(--color-primary) solid 2px;
+    padding: 10px;
+    padding-left: 40px;
+    display: flex;
+    position: relative;
+    margin-bottom: 5px;
+  	word-break:break-all;
+}
+
+.bodyBubble-message:before {
+    content: "";
+    position: absolute;
+	top: 17px;
+    left: 15px;
+    height: 2px;
+    width: 17px;
+    font-size: 0.3px;
+    background: var(--color-primary);
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.bodyBubble-message__text > img {
+	width: var(--font-size-message);
+  	height: var(--font-size-message);
+}
+
+.bodyBubble-message__decoration {
+    display: block;
+    position: absolute;
+    top: -23px;
+    right: -14px;
+    width: 40px;
+}
+
+.bodyBubble-message__decoration .star {
+    fill: none;
+    stroke: var(--color-primary);
+    stroke-miterlimit: 10;
+    stroke-width: 0.9px;
+}
+
+.bodyBubble-message__decoration .dot1 {
+    fill: var(--color-primary);
+}
+
+.bodyBubble-message__decoration .dot2 {
+    fill: var(--color-primary);
+    stroke: var(--color-primary);
+    stroke-width: 0.5px;
+}
